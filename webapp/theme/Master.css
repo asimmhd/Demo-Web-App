@@ -1,0 +1,48 @@
+BODY
+{
+    BACKGROUND-COLOR: #FFF;
+    COLOR: #333366;
+    font-weight: bold;
+    FONT-FAMILY: 'arial'
+}
+H1
+{
+    COLOR: #6666CC;
+    FONT-FAMILY: 'arial';
+    TEXT-TRANSFORM: capitalize
+}
+H2
+{
+    COLOR: #6666CC;
+    FONT-FAMILY: 'Arial';
+    TEXT-TRANSFORM: capitalize
+}
+H3
+{
+    COLOR: #6666CC;
+    FONT-FAMILY: 'Arial';
+    TEXT-TRANSFORM: capitalize
+}
+
+H4
+{
+    COLOR: #6666CC;
+    FONT-FAMILY: 'arial';
+    TEXT-TRANSFORM: capitalize
+}
+
+H5
+{
+    COLOR: #6666CC;
+    FONT-FAMILY: 'arial';
+    TEXT-TRANSFORM: capitalize
+}
+H6
+{
+    COLOR: #6666CC;
+    FONT-FAMILY: 'arial';
+    TEXT-TRANSFORM: capitalize
+}
+TH {
+ color: #6060cc
+}

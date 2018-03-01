@@ -1,0 +1,89 @@
+body
+{
+	font-family: Arial;
+	font-size: 12px;
+	margin: 0pt
+}
+
+
+
+
+div.navigation img, div.navigation input
+
+{
+	font-size: 0pt;
+	border: 0pt;
+	padding: 0pt;
+	margin: 0pt;
+	outline: 0pt;
+	text-align: right;
+	height: 45px;
+	width: 40px;
+}
+
+/*
+ * Container
+ *  Main window pane 
+ *  determines the size 
+ *  of the whole screen
+ */
+div.container 
+{
+	width : 100%;
+	height : 100%;
+	background-color : #FFFFFF;
+}
+
+/* 
+ * screen layout - browsing 
+ */
+div.container div.browsing 
+{
+	width : inherit;
+	height : 16%;
+	border : 0px	solid #ccc;
+	background-color : #FFFFFF;
+	background-image: url('../images/connector.gif');		
+	background-repeat: repeat-x;
+	background-position: bottom;
+}
+
+
+/* 
+ * screen layout - activities 
+ */
+div.container div.activity
+{
+	float : right;
+	width : 80%;  /* 80%; */
+	height :86%;
+	border : 0px	solid #ccc;
+	background-color : #FFFFFF;
+	table-layout:auto;
+	}
+
+/*
+ * Browsing part logo
+ */ 
+div.browsing div.logo
+{
+	float : left;
+	width: 30%;
+	font-size: 0pt;
+	border: 0px dotted #000;
+	margin-top: 0px;
+}
+
+/*
+ * Browsing part navigation
+ */ 
+div.browsing div.navigation
+{
+	float: right;
+	margin-top: 65px;
+	vertical-align:bottom;
+	font-size: 15px;
+	border: 0pt;
+	
+}
+

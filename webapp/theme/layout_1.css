@@ -1,0 +1,177 @@
+body
+{
+	font-family: Arial;
+	font-size: 12px;
+	margin: 0pt
+}
+
+div.navigation img, div.navigation input
+{
+	font-size: 0pt;
+	border: 0pt;
+	padding: 0pt;
+	margin: 0pt;
+	outline: 0pt;
+	text-align: right;
+	height: 45px;
+	width: 40px;
+}
+
+/*
+ * Container
+ *  Main window pane 
+ *  determines the size 
+ *  of the whole screen
+ */
+div.container 
+{
+	width : 100%;
+	height : 100%;
+	background-color : #4D81B1;
+}
+
+div.container_new 
+{
+	width : 100%;
+	height : 100%;
+	background-color : #4D81B1;
+}
+
+/* 
+ * screen layout - browsing 
+ */
+div.container div.browsing 
+{
+	width : inherit;
+	height : 50%;
+	border : 0px	solid #ccc;
+	background-color : #4D81B1;
+	background-image: url('../images/connector.gif');		
+	background-repeat: repeat-x;
+	background-position: bottom;
+}
+
+
+/* 
+ * screen layout - activities 
+ */
+div.container div.activity
+{
+	float : right;
+	width : 81.5%;  /* 80%; */
+	height :86%;
+	border : 0px	solid #ccc;
+	background-color : #FFFFFF;
+	table-layout:auto;
+	}
+
+/*
+ * Browsing part logo
+ */ 
+div.browsing div.logo
+{
+	float:left;
+	width: 30%;
+	font-size: 0pt;
+	border: 0px dotted #000;
+	margin-top: 0px;
+	/*margin-left:3px;
+	background-color : #FFFFFF;*/
+}
+
+/*
+ * Browsing part navigation
+ */ 
+div.browsing div.navigation
+{
+	float: right;
+	margin-top: 65px;
+	vertical-align:bottom;
+	font-size: 15px;
+	border: 0pt;
+}
+
+.roundleft{
+ background-image:url(../screenFiles/roundleft.png); 
+ position:absolute;
+ left:0px; 
+ background-repeat:no-repeat; 
+ float:left; 
+ width:23px; 
+ border:0px; 
+ z-index:30;
+}
+
+.roundborder{
+  background-image:url(../screenFiles/border.gif); 
+  position:absolute; 
+  left:22px; 
+  background-repeat:repeat-x; 
+  width:756px; 
+  float:left; 
+  border:0px; 
+  z-index:30
+  }
+  
+.roundright{
+ background-image:url(../screenFiles/roundright.png); 
+ background-repeat:no-repeat; 
+ position:absolute; 
+ height:23px; 
+ left:762px; 
+ float:left; 
+ top:-3px; 
+ width:23px; 
+ border:0px; 
+ z-index:30;
+ }
+ 
+.roundborderv{
+ background-image:url(../screenFiles/borderv.gif); 
+ position:absolute; 
+ left:3px; 
+ background-repeat:repeat; 
+ width:6px; 
+ top:12px;  
+ height:507px; 
+ float:left; 
+ border:0px; 
+ z-index:30;
+ }
+ 
+.roundleft2{
+ background-image:url(../screenFiles/roundleft2.png); 
+ position:absolute; 
+ left:3px; 
+ background-repeat:no-repeat; 
+ width:16px; 
+ height:20px; 
+ top:522px;  
+ float:left; 
+ border:0px; 
+ z-index:30;
+ }
+ 
+ .roundright2{
+  background-image:url(../screenFiles/roundright2.png); 
+  background-repeat:no-repeat; 
+  position:absolute; 
+  height:23px; 
+  left:756px; 
+  float:left; 
+  top:468px; 
+  width:25px; 
+  border:0px; 
+  z-index:30;
+  }  
+
+.titleNew{
+ background-color:#CAC6C5;
+ position:absolute; 
+ height:35px;
+ left:9px;
+ width:762px;
+ top:5px; 
+ z-index:2;
+ border-bottom:1px solid #FFFFFF;
+ }

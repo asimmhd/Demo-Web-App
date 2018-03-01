@@ -1,0 +1,204 @@
+<?xml version="1.0"?>
+<Root>
+	<!--Locale is optional -->
+	<Locale>en_US</Locale>
+	<LogonRequired>Yes</LogonRequired>
+	<Numbers>0123456789</Numbers>
+	<DateToNumber>YYYYMMDD</DateToNumber>
+	<Alpha>abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</Alpha>
+	<Uppercase>ABCDEFGHIJKLMNOPQRSTUVWXYZ</Uppercase>
+	<Lowercase>abcdefghijklmnopqrstuvwxyz</Lowercase>
+	<Alpha2Number>true</Alpha2Number>
+	<!-- ebcdic code page used on the original platform. -->
+	<EbcdicCharset>cp037</EbcdicCharset>
+	<DecimalSep>.</DecimalSep>
+	<DefaultPackedMode>FMODE</DefaultPackedMode>
+	<!-- Division Mode is used to indicate how to deal with divisor 0 mainly 
+		0 - 0 divisor is never allowed; 1 - 0 is only allowed divide by 0, which 
+		results in 0; Default value is 0 which is stored in BaseData. -->
+	<DivisionMode>1</DivisionMode>
+	<MoveNToCPad0>N</MoveNToCPad0>
+	<!-- Indicate if initialise internal representation of FLSD with SPACE. 
+		In java, if a char is not initialised, it's 0x00. -->
+	<InitFlsd>false</InitFlsd>
+	<ThouSep>,</ThouSep>
+	<DateFormat>yyyy-MM-dd</DateFormat>
+	<EnforceSize>Yes</EnforceSize>
+	<Autotab>Yes</Autotab>
+	<OutputsAsFields>No</OutputsAsFields>
+	<DontReport>AppVars/ResultSet/CodeModel/Logger</DontReport>
+	<PFKeyLangConditioned>No</PFKeyLangConditioned>
+	<com.quipoz.framework.util.charset.comparer.defaultCharSetIdx>0
+	</com.quipoz.framework.util.charset.comparer.defaultCharSetIdx>
+
+	<DefaultFold>uppercase</DefaultFold>
+
+	<MessageModel>ONSCREEN</MessageModel>
+	<ShowVNOnError>Yes</ShowVNOnError>
+	<StartupPage>NOT APPLICABLE</StartupPage>
+	<JSPSingleModel>
+		<Exclude>Unsec*</Exclude>
+		<Exclude>log*</Exclude>
+		<Exclude>err*</Exclude>
+		<Include>*</Include>
+	</JSPSingleModel>
+	<JSPBaseScreen>/main.jsp</JSPBaseScreen>
+
+	<DBCSScreenLanguage>UTF-8</DBCSScreenLanguage>
+	<DBCSLanguage>Cp943</DBCSLanguage>
+	<DBCSForScreens>true</DBCSForScreens>
+	<DBCSForDB>true</DBCSForDB>
+	<DBCSForFiles>true</DBCSForFiles>
+	<DBCSForDiag>true</DBCSForDiag>
+
+	<Server>localswing</Server>
+	<SMTPServer>test.u2l.com</SMTPServer>
+
+	<TableBuffer>yes</TableBuffer>
+	<Collate></Collate>
+
+	<DataSourceJNDI>n/a</DataSourceJNDI>
+
+	<!-- using Amit's local DB -->
+	<DataSourceJDBC>jdbc:mysql://123.12.23.45:3306/poc</DataSourceJDBC><!-- ?profileSQL=true -->
+	<UseridJDBC>root</UseridJDBC>
+	<PasswordJDBC>password123</PasswordJDBC>
+
+	<!-- <DataSourceJDBC>jdbc:db2://itanium02:50000/FUJMBP02</DataSourceJDBC> 
+		<UseridJDBC>db2admin</UseridJDBC> <PasswordJDBC>db2admin</PasswordJDBC> -->
+	<!-- ResultSetType to be used when creating prepared statement. The value 
+		of it should be one of the list: ResultSet.TYPE_FORWARD_ONLY 1003 ResultSet.TYPE_SCROLL_INSENSITIVE 
+		1004 ResultSet.TYPE_SCROLL_SENSITIVE 1005 -->
+	<ResultSetType>1004</ResultSetType>
+	<PasswordEncrypt>no</PasswordEncrypt>
+	<TransactionScope>application</TransactionScope>
+	<AppSchema>sears</AppSchema>
+	<FWSchema>QUIPOZ</FWSchema>
+
+	<TruncateSQLParms>NO</TruncateSQLParms>
+
+	<DebugLevel>5</DebugLevel>
+	<ConsoleDebugLevel>25</ConsoleDebugLevel>
+	<AppDebugLevel>5</AppDebugLevel>
+	<SQLDiagLevel>95</SQLDiagLevel>
+	<SQLEDiagLevel>250</SQLEDiagLevel>
+	<SQLSummaryOnly>no</SQLSummaryOnly>
+	<TraceSource>on</TraceSource>
+	<MonitorOn>Y</MonitorOn>
+	<ExecutionMode>2</ExecutionMode>
+	<ProvidedSessionFacade>com.csc.qre.cics.sessionfacade.CICSPseudoSessionFacadeBean
+	</ProvidedSessionFacade>
+	<MemoryRefDebug>10</MemoryRefDebug>
+	<MasterPrograms>
+		<DefaultProgramPackage>com.sears.processing.code.
+		</DefaultProgramPackage>
+		<Program>
+			<Handle>default</Handle>
+			<Name>PSCO</Name>
+		</Program>
+	</MasterPrograms>
+	<ProgramPackage>com.testharness.processing.online.</ProgramPackage>
+
+	<!--OnlineTimeout is the amount of time to allow for an online transaction 
+		to complete, before suspecting a problem such as an infinite loop and killing 
+		it. Make sure this value is less than any of the timeouts defined for the 
+		EJB, Web HTTP Session, Server etc. -->
+	<OnlineTimeout>12000</OnlineTimeout>
+
+	<!--Batch timeout is the same, but for batch Make sure this value is less 
+		than any of the timeouts defined for the EJB, Web HTTP Session, Server etc. -->
+	<BatchTimeout>12000</BatchTimeout>
+
+	<!--UserTimeout is the time we will let a user sit there without doing anything 
+		before concluding they have gone out to lunch, and they should be signed 
+		off for security reasons. This should be about the same value as the OnlineTimeout. -->
+	<UserTimeout>6000</UserTimeout>
+
+	<!--UserHeartbeat is used for "user is still logged on" testing. A notification 
+		is sent to the server at the end of the time limit. If the server does not 
+		receive a notification for two such periods, it will kill the session. Typically, 
+		the reason why the server stops getting such notifications is that the user 
+		closed the browser window, turned off the PC, had network problems etc. This 
+		should be much less than the online timeout value. One and a half this value 
+		is about how long locks on the database would be held if the user disconnected 
+		and tried to logon again. 30 seconds is probably about right, but consider 
+		if you have 300 users logged on, this is 10 requests a second. They are, 
+		however, very, very, very quick and trivial requests. -->
+	<UserHeartbeat>1500</UserHeartbeat>
+
+	<!-- Application Use variables. These will be loaded into corresponding 
+		variables in AppVars, which can be used in the Application as needed. We 
+		suggest you document their usage here. -->
+
+	<!-- Location of output files. -->
+	<ApplicationUse0>file://temp</ApplicationUse0>
+
+	<!-- Location of report output files. -->
+	<ApplicationUse1>n/a</ApplicationUse1>
+
+	<!-- How many records there must be in a code table before we give up, and 
+		do not generate an HTML SELECT style dropdown box, but rather generate an 
+		instruction to pop up a search form which will show the user the first few 
+		entries, and allow search. This minimises network traffic. For example, postcode. 
+		We don't want to throw all 9,000 postcode entries across the network to populate 
+		a dropbox. If this value is not supplied or not numeric, tables with more 
+		than 42 entries will behave like that. The code is in PolisyAsiaHTMLFormatter. -->
+	<ApplicationUse2>42</ApplicationUse2>
+
+	<!-- Transaction and Program affinity file. This file is a simple XML document 
+		with each record having 3 tags. These tags are Tran, Prog, TWA. See Class 
+		CICSTranProg. This file is required, otherwise the system can't possibly 
+		work. -->
+	<ApplicationUse3>CICSTranProg.xml</ApplicationUse3>
+
+	<ApplicationUse4></ApplicationUse4>
+
+	<!-- System we're running on -->
+	<ApplicationUse5>Windows</ApplicationUse5>
+
+	<ApplicationUse6></ApplicationUse6>
+
+	<ApplicationUse7></ApplicationUse7>
+
+	<ApplicationUse8></ApplicationUse8>
+
+	<ApplicationUse9></ApplicationUse9>
+
+	<ApplicationUse10></ApplicationUse10>
+
+	<ApplicationUse11></ApplicationUse11>
+
+	<!-- Used for unsecured testing. Do NOT put a value here in production! 
+		Syntax is USERPRF/OUTQ/OUTQLIB/JOBD/JOBDLIB" eg USER123/Q/QSYS/A Job/INPRD -->
+	<ApplicationUse12>TestUser/Test User/Q/INPRD/A Job/INPRD
+	</ApplicationUse12>
+
+	<LDapUrl>n/a</LDapUrl>
+	<LDapBase>n/a</LDapBase>
+	<SystemAdminName>n/a</SystemAdminName>
+	<SystemAdminPwd>n/a</SystemAdminPwd>
+	<XMLSource>n/a</XMLSource>
+	<xmlback>n/a</xmlback>
+	<xmlACon>n/a</xmlACon>
+	<pdfTemplate>n/a</pdfTemplate>
+	<pdfOutput>n/a</pdfOutput>
+
+	<!-- fop print root directory -->
+	<FOPPrintRoot>n/a</FOPPrintRoot>
+
+	<FOPOnLinePrintRoot>n/a</FOPOnLinePrintRoot>
+
+	<!-- Batch Socket URL -->
+	<SocketURL>n/a</SocketURL>
+
+	<!-- Batch Socket Port -->
+	<SocketPort>n/a</SocketPort>
+
+	<!-- Define suffix of filed name renamed. In some cases, variable name could 
+		be conflicting with java reserved keyword, e.g. class. All of these fields 
+		are renamed in accordance to certain rules. However, these field name could 
+		be used in program somewhere. Then it needs to be renamed to be orginal one 
+		at runtime. Delimiter for multiple suffixes is semicolon ';' To apply this 
+		changes, suffixes are defined here to avoid hardcoding -->
+	<VariableRenamingSuffix>_var</VariableRenamingSuffix>
+</Root>

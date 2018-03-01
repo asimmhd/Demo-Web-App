@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root>
+	<Tran>
+		<Id>PSCO</Id>
+		<Prog>com.sears.processing.code.AcceptServiceUnitNumber</Prog>
+		<TWA>6000</TWA>
+	</Tran>
+	<Tran>
+		<Id>PS77</Id>
+		<Prog>com.sears.processing.code.AcceptServiceUnitNumber</Prog>
+		<TWA>6000</TWA>
+	</Tran>
+	<Tran>
+		<Id>PS6F</Id>
+		<Prog>com.sears.processing.code.ServiceUnitAdditionalDetails</Prog>
+		<TWA>6000</TWA>
+	</Tran>
+	<Tran>
+		<Id>PS3M</Id>
+		<Prog>com.sears.processing.code.ServiceUnitDetails</Prog>
+		<TWA>6000</TWA>
+	</Tran>
+</Root>

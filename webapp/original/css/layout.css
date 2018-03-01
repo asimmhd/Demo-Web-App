@@ -1,0 +1,299 @@
+body
+{
+	font-family: Arial;
+	font-size: 12px;
+	margin: 0pt
+}
+
+table
+{
+	font-family: Arial;
+	font-size: 12;
+	padding: 3px;
+	float:right;
+	
+}
+
+input, select, option
+{
+	font-family: Arial;
+	font-size: 10;
+	margin-left: 5px;
+	margin-right: 5px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-color: #ECE9D8;
+	border-right-color: #ECE9D8;
+	border-bottom-color: #ECE9D8;
+	border-left-color: #ECE9D8;
+}
+INPUT.Money {
+	
+	text-align: right;
+}
+
+label
+{
+	font: inherit;
+	font-weight: bold;
+}
+
+
+label.heading
+{
+font: inherit;
+font-size:14px;
+	font-weight: bold;
+}
+
+label.screenHeading
+{
+width:100%;
+font: inherit;
+font-size:16px;
+font-weight: bold;
+background:#3b548f;
+text-align:center;
+color:white;
+
+}
+label.subscrHeading
+{
+width:100%;
+font: inherit;
+font-size:14px;
+font-weight: bold;
+background:#3b548f;
+text-align:center;
+color:white;
+
+}
+
+div.steps label, a
+{
+	font: inherit;
+	font-weight: bold;
+	color: white;
+}
+div.content label, a
+{
+	font: inherit;
+	font-weight: normal;
+    font-size:10;	
+}
+div.link a
+{
+	font: inherit;
+	font-weight: bold;
+    font-size:12;	
+    color:#336699;
+}
+div.subheader label, a
+{
+	font: inherit;
+	font-weight: bold;    	
+    color:#336699;
+}
+div.messages label, a
+{
+	font: inherit;
+	font-weight: normal;
+	color: white;
+}
+
+div.navigation img, div.navigation input
+
+{
+	font-size: 0pt;
+	border: 0pt;
+	padding: 0pt;
+	margin: 0pt;
+	outline: 0pt;
+	text-align: right;
+}
+
+/*
+ * Container
+ *  Main window pane 
+ *  determines the size 
+ *  of the whole screen
+ */
+div.container 
+{
+	width : 100%;
+	height : 100%;
+	background-color : #ffffff;
+}
+
+/* 
+ * screen layout - browsing 
+ */
+div.container div.browsing 
+{
+	width : inherit;
+	height : 10%;
+	border : 0px	solid #ccc;
+	background-color : #FFFFF;
+	background-image: url('../images/connector.gif');		
+	background-repeat: repeat-x;
+	background-position: bottom;
+}
+
+/* 
+ * screen layout - steps 
+ */
+div.container div.steps 
+{
+	float : left;
+	width : 20%;  /* 30%; */
+	height : 86%;
+	border : 0px	solid #ccc;
+	padding-left: 3px;
+	background-color : #3b548f;
+	/* overflow: hidden; */
+}
+
+/* 
+ * screen layout - activities 
+ */
+div.container div.activity
+{
+	float : ;
+	width : 80%;  /* 80%; */
+	height :86%;
+	border : 0px	solid #ccc;
+	background-color : #ffffff;
+	table-layout:auto;
+	}
+div.tab
+{
+	float : left;
+	width : 745px;  
+	height :300px;
+     border : 2px	solid #ccc;   
+	background-color : #ffffff;	
+   overflow: auto;    
+   clip: rect( );
+   padding-top: 5px;
+   padding-right: 5px;
+   padding-bottom: 5px; 
+  padding-left: 5px;
+  
+	}
+
+/*
+ * Browsing part logo
+ */ 
+div.browsing div.logo
+{
+	float : left;
+	width: 30%;
+	font-size: 0pt;
+	border: 0px dotted #000;
+	margin-top: 1%;
+}
+
+/*
+ * Browsing part navigation
+ */ 
+div.browsing div.navigation
+{
+	float:right;
+	margin-top: 72px;
+	vertical-align:bottom;
+	font-size: 0pt;
+	border: 0pt;
+	background-image: url('connector.gif');		
+	
+}
+
+/*
+ * Steps part messages
+ */ 
+div.steps div.messages
+{
+	width : inherit;
+	height : 5%;
+	border: 0pt;
+	font-weight: normal;
+}
+
+/*
+ * Steps part activity heading
+ */ 
+ div.steps div.heading 
+{
+	width:inherit;
+	height : 5%;
+	border: 0pt;
+}
+
+/*
+ * Steps part steps-indicator
+ */ 
+div.steps div.indicator 
+{
+	height : 50%;
+	border: 0pt;
+
+}
+
+/*
+ * Steps part function messages
+ */ 
+div.steps div.funtions 
+{
+	width:20%;
+	height : 30%;
+	border: 0pt;
+	vertical-align:bottom;
+}
+
+/*
+ * Steps part function messages
+ */ 
+div.steps div.standard 
+{
+	height : 5%;
+	border: 0pt;
+	margin-top: 60px;
+}
+
+/*
+ * Activitess part - welcome
+ */ 
+div.activity div.welcome 
+{
+	text-align: center;
+	height: 40%;
+	width:inherit;
+}
+
+
+div.activity ,div.command
+{
+	width:inherit;
+	text-align: center;
+	height: 5%;
+	border: 0px solid black
+}
+ 
+
+/*
+ * Activitess part - messages
+ */ 
+div.activity div.error
+{
+	width:inherit;
+	text-align: left;
+	height: 5%;
+	border: 0px solid black
+}
+INPUT.Output {
+background: transparent;
+border:0px;
+color:#336699;
+
+}
